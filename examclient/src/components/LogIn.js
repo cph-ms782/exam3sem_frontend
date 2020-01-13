@@ -16,7 +16,6 @@ function LogIn(props) {
   const logout = (evt) => {
     console.log("LogIn - logout");
     evt.preventDefault();
-    props.updateHobbies([]); // resetting variables
     props.logout();
   };
 

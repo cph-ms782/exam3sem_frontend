@@ -36,7 +36,7 @@ class LoginFacade {
 				this.setToken(res.token);
 			})
 			.catch((err) => {
-				console.log("err", err);
+				console.log('err', err);
 				throw err;
 			});
 	};
@@ -68,17 +68,14 @@ class LoginFacade {
 		return opts;
 	}
 
-	fetchSW = () => {
-		console.log('fetchSW');
-		const options = this.makeOptions('GET', true); //True add's the token
-		return fetch(URL + '/api/sw/datadto', options).then(handleHttpErrors);
-	};
-
 	fetchData = async (url) => {
 		console.log('fetchData');
 		const options = this.makeOptions('GET', true); //True add's the token
-			const res = await fetch(URL + url, options);
-      return handleHttpErrors(res);
+		// const webUrl = url.replace(/ /g, "%20");
+		console.log("fetchdata URL + url", URL + url);
+		
+		const res = await fetch(URL + url, options);
+		return handleHttpErrors(res);
 	};
 }
 const facade = new LoginFacade();
