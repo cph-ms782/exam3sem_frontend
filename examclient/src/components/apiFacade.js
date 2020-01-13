@@ -53,6 +53,7 @@ function apiFacade() {
 			console.log('POST');
 			const options = makeOptions('POST', true, itemBody, loggedIn);
 			console.log('addEditItem POST url', MAINURL + extraURL);
+			console.log('addEditItem POST itemBody', itemBody);
 			console.log('addEditItem options', options);
 			const data = await fetch(MAINURL + extraURL, options).then(handleHttpErrors);
 			return data;

@@ -106,11 +106,15 @@ function RecipeSearchResult({ recipeSearch, updateMenuPlan, menuPlan }) {
 					<ul>
 						{recipeSearch.map((element) => (
 							<li key={uuid()}>
-								<p>{element.id}</p>
-								<Link to={`${url}/recipe/${element.id}`}>( Details - </Link>
-								<Link id={element.id} onClick={addToMenuPlan}>
-									Add to plan)
-								</Link>
+								<div>
+									<p>
+										{element.id}
+										<Link to={`${url}/recipe/${element.id}`}>( Details - </Link>
+										<Link id={element.id} onClick={addToMenuPlan}>
+											Add to plan)
+										</Link>
+									</p>
+								</div>
 							</li>
 						))}
 					</ul>

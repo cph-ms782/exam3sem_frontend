@@ -75,7 +75,7 @@ function Header({ loggedIn }) {
 
 function NoMatch() {
 	console.log('NoMatch');
-	return <div>hello NoMatch</div>;
+	return <div>Login details in uploadet exam file</div>;
 }
 
 export default App;
